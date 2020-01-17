@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "causality"
+version = "0.0.9"
+description = "Tools for causal inference"
+authors = [
+    "Adam Kelleher <akelleh@gmail.com>",
+    "nate giraldi <ng269@cornell.edu>"
+]
+include = ["*.md"]
+
+[tool.poetry.dependencies]
+python = ">=3.5.3"
+networkx = "^2.0"
+numpy = "^1.13.3"
+pandas = "^0.25.3"
+scipy = "^1.4.1"
+statsmodels = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3.2"
+pytest-cov = "^2.8.1"
+pytest-randomly = "^3.2.1"
+
+[build-system]
+requires = ["poetry==1.0.2"]
+build-backend = "poetry.masonry.api"
