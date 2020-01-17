@@ -17,9 +17,39 @@ scipy = "^1.4.1"
 statsmodels = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
+pre-commit = "^1.21.0"
 pytest = "^5.3.2"
 pytest-cov = "^2.8.1"
 pytest-randomly = "^3.2.1"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.git
+  | \.venv
+  | \.mypy_cache
+  | \.pytest_cache
+  | build
+  | dist
+  | wheels
+)/
+'''
+
+[tool.isort]
+apply = 1
+default_section = "THIRDPARTY"
+filter_files = true
+force_grid_wrap = 0
+include_trailing_comma = true
+known_first_party = "counterfact"
+known_third_party = []
+line_length = 88
+lines_between_types = 0
+multi_line_output = 3
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+use_parentheses = true
 
 [build-system]
 requires = ["poetry==1.0.2"]
