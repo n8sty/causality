@@ -1,10 +1,12 @@
 from networkx.algorithms import is_directed_acyclic_graph
 
+
 class AdjustmentException(Exception):
     pass
 
+
 class AdjustForDirectCauses(object):
-    def __init__(self): 
+    def __init__(self):
         pass
 
     def find_predecessors(self, g, causes):
@@ -17,8 +19,8 @@ class AdjustForDirectCauses(object):
         if not is_directed_acyclic_graph(g):
             return False
         if not len(set(effects).intersection(set(causes).union(predecessors))) == 0:
-            return False 
-        return True 
+            return False
+        return True
 
     def admissable_set(self, g, causes, effects):
         predecessors = self.find_predecessors(g, causes)

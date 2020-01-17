@@ -1,1 +1,1 @@
-TOL = 0.01 # tolerance on density normalization
+TOL = 0.01  # tolerance on density normalization
